@@ -1,0 +1,31 @@
+.header{
+    border-bottom: 1px solid #dee2e6!important;
+    border-width: 5px!important;
+    border-color: #dc3545 !important;
+    background-color: #2D2D2D;
+    position: fixed;
+}
+.aside{
+    /*7.4*/
+    margin-top: 12.4vh;
+    border-right: 1px solid #dee2e6!important;
+    border-width: 5px!important;
+    border-color: #dc3545 !important;
+    background-color: #2D2D2D;
+    position: fixed;
+    z-index: 100;
+}
+a{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.dropdown-toggla::after{
+    display: inline-block;
+    margin-left: .255em;
+    content: "";
+    border-top: .6em solid;
+    border-right: .6em solid transparent;
+    border-bottom: 0;
+    border-left: .6em solid transparent;
+}
+

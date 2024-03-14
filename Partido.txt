@@ -1,0 +1,288 @@
+Te voy a pasar un json en el cual hay dos equipos de baquet.
+Cada jugador tiene estadisticas que indican lo bueno o malo que es en cada campo donde 100 es el máximo de nota que pueden sacar y 0 es la peor nota que pueden sacar.
+
+Las estadisticas que tienen no son los puntos que han de hacer sino los buenos que son jugando donde 0 es que es muy malo, 50 esta en la media y 100 que es muy bueno por lo tanto un jugador que tenga un 100 en alguna estadistica hara conseguira hacer mucho de esa estadistica pero en todo momento siendo realista.
+
+Por tanto en el momento de calcular el partido quiero que seas lo mas realista posible.
+
+A partir de ahi quiero que te imagines que eres el entrenador de cada equipo y saques en el 5 inicial los jugadores que te parecen mejores siendo el resto suplentes que jugarian los minutos mas residuales.
+
+Para calcular quienes son los mejores tienes que tener en cuenta que segun su posicion cuales son las estadisticas que mas importan para que juegue bien el partido.
+
+Despues de eso quiero que me generes una tabla de como iria el partido con estadisticas de cada jugador si se enfrentasen los dos equipos añadiendo tambien los minutos que jugaria cada jugador teniendo en cuenta que si en un partido hay 4 partes y cada parte se juegan 12 minutos las suma total de los minutos de los equipos han de dar 240.
+
+Quiero que me generes simplemente una tabla teniendo en cuenta que como entrenador puedes hacer cambios.
+
+Solo quiero que me generes dos tablas de como ha ido el partido la primera del primer equipo y la segunda del segundo equipo.
+
+No quiero que me generes un script para que lo haga yo.
+
+
+{
+    "equipo1": [
+        {
+            "id": 1,
+            "posicion":"PG",
+            "segunda posicion":"SG",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 2,
+            "posicion":"C",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 3,
+            "posicion":"SF",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 4,
+            "posicion":"PF",
+            "segunda posicion":null,
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 5,
+            "posicion":"SG",
+            "segunda posicion":null,
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 6,
+            "posicion":"PG",
+            "segunda posicion":"SG",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 7,
+            "posicion":"C",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 8,
+            "posicion":"SF",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 9,
+            "posicion":"PF",
+            "segunda posicion":null,
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 90,
+            "Tiro de 3": 90,
+            "Rebotes": 90,
+            "Asistencias": 90,
+            "Bloqueos": 90,
+            "Robos": 90,
+            "Perdidas": 10
+        },{
+            "id": 10,
+            "posicion":"SG",
+            "segunda posicion":null,
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 10,
+            "Tiro de 2": 10,
+            "Tiro de 3": 10,
+            "Rebotes": 10,
+            "Asistencias": 10,
+            "Bloqueos": 10,
+            "Robos": 10,
+            "Perdidas": 10
+        }
+    ],
+    "equipo2": [
+        {
+            "id": 11,
+            "posicion":"PG",
+            "segunda posicion":"SG",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 12,
+            "posicion":"C",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 13,
+            "posicion":"SF",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 14,
+            "posicion":"PF",
+            "segunda posicion":null,
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 15,
+            "posicion":"SG",
+            "segunda posicion":null,
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 16,
+            "posicion":"PG",
+            "segunda posicion":"SG",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 17,
+            "posicion":"C",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 18,
+            "posicion":"SF",
+            "segunda posicion":"PF",
+            "nombre":"Jarret Allen",
+            "Tiro Libre": 50,
+            "Tiro de 2": 50,
+            "Tiro de 3": 50,
+            "Rebotes": 50,
+            "Asistencias": 50,
+            "Bloqueos": 50,
+            "Robos": 50,
+            "Perdidas": 50
+        },{
+            "id": 19,
+            "posicion":"PF",
+            "segunda posicion":null,
+            "nombre":"Bueno",
+            "Tiro Libre": 50,
+            "Tiro de 2": 90,
+            "Tiro de 3": 90,
+            "Rebotes": 90,
+            "Asistencias": 90,
+            "Bloqueos": 90,
+            "Robos": 90,
+            "Perdidas": 10
+        },{
+            "id": 20,
+            "posicion":"SG",
+            "segunda posicion":null,
+            "nombre":"Malo",
+            "Tiro Libre": 10,
+            "Tiro de 2": 10,
+            "Tiro de 3": 10,
+            "Rebotes": 10,
+            "Asistencias": 10,
+            "Bloqueos": 10,
+            "Robos": 10,
+            "Perdidas": 10
+        }
+    ]
+}

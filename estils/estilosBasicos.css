@@ -1,0 +1,140 @@
+body {
+  background-color: #232323;
+}
+
+.articulo {
+  border-radius: 1.25rem;
+  border: 1px solid #ED3B3B;
+  background-color: #2D2D2D;
+  box-shadow: -8px 10px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+.main {
+  padding-left: 12rem !important;
+  padding-top: 5vh;
+  height: auto;
+  min-height: auto;
+}
+
+.boton {
+  border-radius: 0.625rem;
+  background: #ED3B3B;
+  color: #ECECEC;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 0px;
+  min-height: 3rem;
+  min-width: fit-content;
+
+}
+
+
+
+.boton:hover {
+  background: #a92828;
+  
+}
+
+input[type="button"].verde,
+button.verde {
+  border-radius: 0.625rem;
+  /* rgb(47, 102, 223); */
+  background: green;
+  color: #ECECEC;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 0px;
+}
+
+.verde:hover {
+  background: rgb(0, 79, 0);
+  
+}
+
+input[type=button].verde:active,
+button.verde:active {
+  background: rgb(0, 79, 0);
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 25rem;
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  border-radius: 1.875rem;
+  border: 1px solid #000;
+  background: #ED3B3B;
+  height: 0.85rem;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  border-radius: 1.875rem;
+  border: 1px solid #000;
+  background: #ED3B3B;
+  height: 0.85rem;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  margin-top: -8px;
+  /* Centers thumb on the track */
+
+  background-color: #ED3B3B;
+  border-radius: 1.875rem;
+  border: 1px solid #000;
+  height: 1.7rem;
+  width: 1.7rem;
+}
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-track {
+  border: 3px solid #ffffff;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+
+  border: 3px solid #ffffff;
+
+}
+
+.imagen {
+  border-radius: 100%;
+  border: 3px solid #FFF;
+}
+
+.puntos {
+  border: 1px solid #ECECEC;
+  width: 2.6875rem;
+  height: 3rem;
+  text-align: center;
+}
+
+.jugadores {
+  color: #ECECEC;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
