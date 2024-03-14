@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../estils/headerAside.css">
     <link rel="stylesheet" href="../estils/estilosBasicos.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="../controlador/crearJugadores.js"></script>
     <title>Document</title>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -43,7 +45,7 @@
                         <h1>Crear Jugadores</h1>
                     </div>
                     <div class="col col-6">
-                        <h2>Puntos Disponibles: 400</h2>
+                        <h2 style="display: flex;">Puntos Disponibles: <div class="ms-2" id="puntos"></div></h2>
                     </div>
                 </div>
                 <div class="form-group mb-2 mt-3 ">

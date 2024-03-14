@@ -47,7 +47,7 @@
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container">
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 18vh;">
+        <div class="articulo text-white container" style="width: 42.9375rem; margin:auto;margin-top: 18vh;">
 
             <form class="needs-validation px-4 " novalidate>
                 <div class="container">

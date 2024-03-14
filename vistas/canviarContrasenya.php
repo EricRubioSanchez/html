@@ -38,9 +38,9 @@
         <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 33vh;">
             
             <form class="needs-validation px-4 " novalidate>
-            <h1>Unirse Fantasy</h1>
+            <h1>Recuperar Contraseña</h1>
                 <div class="form-group mb-3 mt-4">
-                    <label for="nombreLiga">Recuperar Contraseña</label>
+                    <label for="nombreLiga">Correo</label>
                     <input required type="email" class="form-control" id="correu" placeholder="example@gmail.com">
                     <div class="invalid-feedback">
                     Por favor introduce un correo valido.
