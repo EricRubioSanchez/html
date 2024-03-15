@@ -16,8 +16,9 @@ function puntosActuales() {
     numero = 0;
     for (let index = 0; index < $("input[type='number']").length; index++) {
         const element = $("input[type='number']")[index];
+        
         if (element.getAttribute("name") == "perdidas") {
-            numero -= 100 - parseInt(element.value)
+            numero += 100 - parseInt(element.value)
         } else {
             numero += parseInt(element.value);
         }
