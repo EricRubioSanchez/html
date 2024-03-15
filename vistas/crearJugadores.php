@@ -45,7 +45,8 @@
                         <h1>Crear Jugadores</h1>
                     </div>
                     <div class="col col-6">
-                        <h2 style="display: flex;">Puntos Disponibles: <div class="ms-2" id="puntos"></div></h2>
+                        <h2 style="display: flex;">Puntos Disponibles: <div class="ms-2" id="puntos"></div>
+                        </h2>
                     </div>
                 </div>
                 <div class="form-group mb-2 mt-3 ">
@@ -70,7 +71,7 @@
                             </select>
                         </div>
                         <div class="col col-2">
-                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" type="color" id="peloColor">
+                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" name="pelo" type="color" id="peloColor">
                         </div>
                     </div>
                 </div>
@@ -95,7 +96,7 @@
                             </select>
                         </div>
                         <div class="col col-2">
-                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" type="color" id="ojosColor">
+                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" name="ojos" type="color" id="ojosColor">
                         </div>
                     </div>
                 </div>
@@ -121,7 +122,7 @@
                             </select>
                         </div>
                         <div class="col col-2">
-                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" type="color" id="barbaColor">
+                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" type="color" name="barba" id="barbaColor">
                         </div>
                     </div>
                 </div>
@@ -130,7 +131,12 @@
                         <div class="col col-6 "><label for="rebotes">Rebotes</label></div>
                         <div class="col col-4"><label for="nariz">Nariz</label></div>
                         <div class="col col-2">
-                            <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/mii.png">
+                            <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/cuerpo.png">
+                            <img alt="Imagen del Personaje" class="piel" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/cabeza.png">
+                            <img alt="Barba del Personaje" class="barba" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/mii2.png">
+                            <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/ojos.png">
+                            <img alt="Imagen del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/pupilas.png">
+
                         </div>
 
                     </div>
@@ -197,7 +203,7 @@
                             </select>
                         </div>
                         <div class="col col-2">
-                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" type="color" id="piel">
+                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" name="piel" type="color" id="piel">
                         </div>
 
                     </div>
@@ -229,7 +235,7 @@
                 <div class="form-group mb-2 mt-3">
                     <div class="row">
                         <div class="col col-6 "><label for="perdidas">Perdidas</label></div>
-                        
+
 
                     </div>
                     <div class="row">
@@ -242,7 +248,7 @@
                         </div>
                         <div class="col col-6"><button class="boton" type="submit" style="width: -webkit-fill-available;height: 3.4rem;">Enviar</button></div>
                     </div>
-                </div>             
+                </div>
             </form>
         </div>
     </main>
