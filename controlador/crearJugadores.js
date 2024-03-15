@@ -16,12 +16,8 @@ function puntosActuales() {
     numero = 0;
     for (let index = 0; index < $("input[type='number']").length; index++) {
         const element = $("input[type='number']")[index];
-
-        if (element.getAttribute("name") == "perdidas") {
-            numero += 100 - parseInt(element.value)
-        } else {
             numero += parseInt(element.value);
-        }
+        
     }
 
     let puntosDisponibles = puntosTotales - numero;
@@ -39,7 +35,7 @@ function puntosActuales() {
 
 function calcularMaximos() {
     let puntosDisponibles = puntosTotales - numero;
-    console.log(puntosDisponibles)
+
 
     for (let index = 0; index < $("input[type='number']").length; index++) {
         const element = $("input[type='number']")[index];
@@ -53,12 +49,10 @@ function calcularMaximos() {
     }
 }
 
-function canviarColor(e) {
-    console.log(e.target.getAttribute("name"))
-    console.log(document.getElementsByClassName(e.target.getAttribute("name"))[0])
-    var mug = document.getElementsByClassName(e.target.getAttribute("name"))[0];
+function canviarColor(elemento) {
+    var mug = document.getElementsByClassName(elemento.getAttribute("name"))[0];
     var canvas = document.createElement("canvas");
-    var ctx = canvas.getContext("2d");
+    var ctx = canvas.getContext("2d", { willReadFrequently: true });
     var originalPixels = null;
     var currentPixels = null;
     getPixels(mug)
@@ -73,23 +67,23 @@ function canviarColor(e) {
     }
 
     function changeMugsColor() {
-   
-        
+
+
         changeColor(mug);
-        
+
     }
 
     function changeColor(amug) {
-        
+
         if (!originalPixels) return; // Check if image has loaded
-        var newColor = HexToRGB(e.target.value);
-        console.log(e.target.value)
-        
+        var newColor = HexToRGB(elemento.value);
+
+
 
         for (var I = 0, L = originalPixels.data.length; I < L; I += 4) {
             if (currentPixels.data[I + 3] > 0) {
                 currentPixels.data[I] = newColor.R;
-                currentPixels.data[I + 1] =  newColor.G;
+                currentPixels.data[I + 1] = newColor.G;
                 currentPixels.data[I + 2] = newColor.B;
             }
         }
@@ -112,9 +106,32 @@ function canviarColor(e) {
     changeMugsColor()
 }
 
+function agafarColor(e) {
+    canviarColor(e.target);
+}
+
+function canviarTipo(e) {
+    let carpeta = e.target.getAttribute("id");
+
+    if (carpeta == "posicion") { return }
+    let img = document.getElementsByClassName(carpeta)[0];
+    if (e.target.value == "Ninguna" || e.target.value == "Calvo") {
+        img.setAttribute("hidden","");
+    } else {
+        if(img.hasAttribute("hidden")){img.removeAttribute("hidden")};
+
+        let ruta = "../imagenes/" + carpeta + "/" + e.target.value + ".png";
+        img.setAttribute("src", ruta);
+        if (carpeta == "boca" || carpeta == "nariz") {
+            return "";
+        }
+        document.getElementById(carpeta+"Color").value="#000000"
+        //canviarColor(document.getElementById(carpeta+"Color"));
+    }
+}
 
 let numero = 0;
-let puntosTotales = 300;
+let puntosTotales = 400;
 document.getElementById("puntos").innerHTML = puntosTotales;
 
 
@@ -124,4 +141,5 @@ $("input[type='number']").on("input", canviarNumber);
 $("input[type='range']").on("change", calcularMaximos);
 $("input[type='number']").on("change", calcularMaximos);
 
-$("input[type='color']").on("input", canviarColor);
+$("input[type='color']").on("input", agafarColor);
+$('select').on("change", canviarTipo);

@@ -35,7 +35,7 @@
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container">
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 33vh;">
+        <div class="articulo text-white container" style="width: 32.9375rem; margin:auto;margin-top: 23vh;">
             
             <form class="needs-validation px-4 " novalidate>
             <h1>Unirse Fantasy</h1>

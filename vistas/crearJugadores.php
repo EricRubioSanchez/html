@@ -66,7 +66,7 @@
                         </div>
                         <div class="col col-4">
                             <select id="pelo" class="form-select">
-                                <option selected>Cerrada</option>
+                                <option selected>Calvo</option>
                                 <option>Abierta</option>
                             </select>
                         </div>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="col col-4">
                             <select id="ojos" class="form-select">
-                                <option selected>Cerrada</option>
+                                <option selected>Predeterminados</option>
                                 <option>Abierta</option>
                             </select>
                         </div>
@@ -117,8 +117,8 @@
                         </div>
                         <div class="col col-4">
                             <select id="barba" class="form-select">
-                                <option selected>Cerrada</option>
-                                <option>Abierta</option>
+                                <option selected>Ninguna</option>
+                                <option>Perilla</option>
                             </select>
                         </div>
                         <div class="col col-2">
@@ -129,14 +129,16 @@
                 <div class="form-group mb-2 mt-3">
                     <div class="row">
                         <div class="col col-6 "><label for="rebotes">Rebotes</label></div>
-                        <div class="col col-4"><label for="nariz">Nariz</label></div>
+                        <div class="col col-4"><label for="accesorios">Accesorios</label></div>
                         <div class="col col-2">
                             <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/cuerpo.png">
                             <img alt="Imagen del Personaje" class="piel" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/cabeza.png">
-                            <img alt="Barba del Personaje" class="barba" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/mii2.png">
-                            <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/ojos.png">
-                            <img alt="Imagen del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/pupilas.png">
-
+                            <img alt="Boca del Personaje" class="boca" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/boca/Predeterminada.png">
+                            <img alt="Barba del Personaje" class="barba" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/barba/Perilla.png">
+                            <img alt="Nariz del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/nariz.png">
+                            <img alt="Ojos del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;"  src="../imagenes/ojos/Predeterminados.png">
+                            <img alt="Pupilas del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/ojos/Predeterminados_2.png">
+                            <img alt="Accesorios del Personaje" class="accesorios" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/accesorios/">
                         </div>
 
                     </div>
@@ -151,7 +153,7 @@
                         </div>
                         <div class="col col-4">
                             <select id="nariz" class="form-select">
-                                <option selected>Cerrada</option>
+                                <option selected>Predeterminada</option>
                                 <option>Abierta</option>
                             </select>
                         </div>
@@ -174,8 +176,9 @@
                         </div>
                         <div class="col col-4">
                             <select id="boca" class="form-select">
-                                <option selected>Cerrada</option>
-                                <option>Abierta</option>
+                                <option selected>Predeterminada</option>
+                                <option>Sonriente</option>
+                                <option>Morritos</option>
                             </select>
                         </div>
 
@@ -198,12 +201,15 @@
                         </div>
                         <div class="col col-4">
                             <select id="posicion" class="form-select">
-                                <option selected>Cerrada</option>
-                                <option>Abierta</option>
+                                <option selected>C</option>
+                                <option>PG</option>
+                                <option>SG</option>
+                                <option>PF</option>
+                                <option>SF</option>
                             </select>
                         </div>
                         <div class="col col-2">
-                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" name="piel" type="color" id="piel">
+                            <input style="width: 10rem;max-width:none;" class="form-control form-control-color" name="piel" value="#ad5833" type="color" id="piel">
                         </div>
 
                     </div>
@@ -234,14 +240,14 @@
                 </div>
                 <div class="form-group mb-2 mt-3">
                     <div class="row">
-                        <div class="col col-6 "><label for="perdidas">Perdidas</label></div>
+                        <div class="col col-6 "><label for="control">Control</label></div>
 
 
                     </div>
                     <div class="row">
                         <div class="col col-6">
-                            <input type="range" name="perdidas" id="perdidas" value="100" min="0" max="100" step="1">
-                            <input class="form-control" style="width:5.5rem;display:inline;" name="perdidas" value="100" min="0" max="100" step="1" type="number">
+                            <input type="range" name="control" id="control" value="0" min="0" max="100" step="1">
+                            <input class="form-control" style="width:5.5rem;display:inline;" name="control" value="0" min="0" max="100" step="1" type="number">
                             <div class="invalid-feedback">
                                 Por favor introduce un numero entre el 0 y el 100.
                             </div>
