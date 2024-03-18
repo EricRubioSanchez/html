@@ -14,8 +14,8 @@
 <body>
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
-    <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
-        <div class="articulo text-white container-fluid" style="width: 62.9375rem; margin:auto;margin-top: 14vh;min-width:28rem;">
+    <main class="main align-items-center justify-content-center justify-content-md-between container-fluid">
+        <div class="articulo text-white container-fluid" style="max-width: 62.9375rem; margin:auto;margin-top: 14vh;min-width:28rem;">
         <a href="../vistas/MiEquipo.php" class="nav-link link-light" >
             <div class="row">
                 <div class="col col-2 col-md-2 col-xl-1">
@@ -37,7 +37,7 @@
             </div>
         </a>
         </div>
-        <div class="articulo text-white container-fluid" style="width: 62.9375rem; margin:auto;margin-top: 3vh;min-width:28rem;">
+        <div class="articulo text-white container-fluid" style="max-width: 62.9375rem; margin:auto;margin-top: 3vh;min-width:28rem;">
         <a href="../vistas/equipoRival.php" class="nav-link link-light" >
             <div class="row">
                 <div class="col col-2 col-md-2 col-xl-1">

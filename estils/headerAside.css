@@ -28,4 +28,8 @@ a{
     border-bottom: 0;
     border-left: .6em solid transparent;
 }
+.alink:hover{
+    color: #dc3545;
+
+}
 

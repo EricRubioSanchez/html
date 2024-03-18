@@ -3,11 +3,11 @@
 
         <div class="col col-3 col-xl-4 text-center"></div>
         <div class="col col-2 text-center"><a href="./index.php" class="nav-link px-2 link-danger" aria-current="page"><strong>NOTICIAS</strong></a></div>
-        <div class="col col-2 text-center"><a href="./crearFantasy.php" class="nav-link px-2 link-light"><strong>CREAR FANTASY</strong></a></div>
-        <div class="col col-2 text-center"><a href="./unirseFantasy.php" class="nav-link px-2 link-light"><strong>UNIRSE FANTASY</strong></a></div>
+        <div class="col col-2 text-center"><a href="./crearFantasy.php" class="nav-link px-2 link-light alink"><strong>CREAR FANTASY</strong></a></div>
+        <div class="col col-2 text-center"><a href="./unirseFantasy.php" class="nav-link px-2 link-light alink"><strong>UNIRSE FANTASY</strong></a></div>
         <div class="col col-xl-2 col-1 text-end">
         
-        <a href="./Login.php" class="nav-link px-2 link-light"><strong>LOGIN</strong></a>
+        <a href="./Login.php" class="nav-link px-2 link-light alink"><strong>LOGIN</strong></a>
             <!--
             <div class="dropdown text-end">
                 120

@@ -14,123 +14,151 @@
 <body>
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
-    <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 10vh;">
-            <div class="row">
-                <div class="col col-9">
+    <main class="main container-fluid">
+        <div class="row">
+            <div class="col col-12">
+                <div class="articulo text-white" style="width: 62.9375rem; margin:auto;margin-top: 10vh;">
                     <div class="row">
-                        <div class="col col-12">
-                            <h2>Abierta la liga de jugones</h2>
+                        <div class="col col-9">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <h2>Abierta la liga de jugones</h2>
+                                </div>
+                                <div class="col col-12">
+                                    Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-12">
-                            Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                        <div class="col col-3 text-end" style="margin: auto;">
+                            <button class="boton">Unirse a la Liga</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-3 text-end" style="margin: auto;">
-                    <button class="boton">Unirse a la Liga</button>
                 </div>
             </div>
         </div>
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
-            <div class="row">
-                <div class="col col-9">
+        <div class="row">
+            <div class="col col-12">
+                <div class="articulo text-white" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
                     <div class="row">
-                        <div class="col col-12">
-                            <h2>Abierta la liga de jugones</h2>
+                        <div class="col col-9">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <h2>Abierta la liga de jugones</h2>
+                                </div>
+                                <div class="col col-12">
+                                    Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-12">
-                            Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                        <div class="col col-3 text-end" style="margin: auto;">
+                            <button class="boton">Unirse a la Liga</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-3 text-end" style="margin: auto;">
-                    <button class="boton">Unirse a la Liga</button>
                 </div>
             </div>
         </div>
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
-            <div class="row">
-                <div class="col col-9">
+        <div class="row">
+            <div class="col col-12">
+                <div class="articulo text-white" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
                     <div class="row">
-                        <div class="col col-12">
-                            <h2>Abierta la liga de jugones</h2>
+                        <div class="col col-9">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <h2>Abierta la liga de jugones</h2>
+                                </div>
+                                <div class="col col-12">
+                                    Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-12">
-                            Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                        <div class="col col-3 text-end" style="margin: auto;">
+                            <button class="boton">Unirse a la Liga</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-3 text-end" style="margin: auto;">
-                    <button class="boton">Unirse a la Liga</button>
                 </div>
             </div>
         </div>
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
-            <div class="row">
-                <div class="col col-9">
+        <div class="row">
+            <div class="col col-12">
+                <div class="articulo text-white" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
                     <div class="row">
-                        <div class="col col-12">
-                            <h2>Abierta la liga de jugones</h2>
+                        <div class="col col-9">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <h2>Abierta la liga de jugones</h2>
+                                </div>
+                                <div class="col col-12">
+                                    Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-12">
-                            Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                        <div class="col col-3 text-end" style="margin: auto;">
+                            <button class="boton">Unirse a la Liga</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-3 text-end" style="margin: auto;">
-                    <button class="boton">Unirse a la Liga</button>
                 </div>
             </div>
         </div>
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
-            <div class="row">
-                <div class="col col-9">
+        <div class="row">
+            <div class="col col-12">
+                <div class="articulo text-white" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
                     <div class="row">
-                        <div class="col col-12">
-                            <h2>Abierta la liga de jugones</h2>
+                        <div class="col col-9">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <h2>Abierta la liga de jugones</h2>
+                                </div>
+                                <div class="col col-12">
+                                    Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-12">
-                            Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                        <div class="col col-3 text-end" style="margin: auto;">
+                            <button class="boton">Unirse a la Liga</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-3 text-end" style="margin: auto;">
-                    <button class="boton">Unirse a la Liga</button>
                 </div>
             </div>
         </div>
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
-            <div class="row">
-                <div class="col col-9">
+        <div class="row">
+            <div class="col col-12">
+                <div class="articulo text-white" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
                     <div class="row">
-                        <div class="col col-12">
-                            <h2>Abierta la liga de jugones</h2>
+                        <div class="col col-9">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <h2>Abierta la liga de jugones</h2>
+                                </div>
+                                <div class="col col-12">
+                                    Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-12">
-                            Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                        <div class="col col-3 text-end" style="margin: auto;">
+                            <button class="boton">Unirse a la Liga</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-3 text-end" style="margin: auto;">
-                    <button class="boton">Unirse a la Liga</button>
                 </div>
             </div>
         </div>
-        <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
-            <div class="row">
-                <div class="col col-9">
+        <div class="row">
+            <div class="col col-12">
+                <div class="articulo text-white" style="width: 62.9375rem; margin:auto;margin-top: 3vh;">
                     <div class="row">
-                        <div class="col col-12">
-                            <h2>Abierta la liga de jugones</h2>
+                        <div class="col col-9">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <h2>Abierta la liga de jugones</h2>
+                                </div>
+                                <div class="col col-12">
+                                    Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                                </div>
+                            </div>
                         </div>
-                        <div class="col col-12">
-                            Liga creada por Eric Rubio Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, saepe mollitia perferendis praesentium accusamus suscipit et qui voluptatibus
+                        <div class="col col-3 text-end" style="margin: auto;">
+                            <button class="boton">Unirse a la Liga</button>
                         </div>
                     </div>
-                </div>
-                <div class="col col-3 text-end" style="margin: auto;">
-                    <button class="boton">Unirse a la Liga</button>
                 </div>
             </div>
         </div>

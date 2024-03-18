@@ -14,8 +14,8 @@
 <body>
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
-    <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
-        <div class="articulo text-white container-fluid" style="width: 95.4rem; margin-top: 10vh;">
+    <main class="main align-items-center justify-content-center justify-content-md-between container-fluid">
+        <div class="articulo text-white container-fluid" style=" margin-top: 10vh;">
 
             <div class="row">
                 <div class="col col-1">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid justify-content-between" style="width: 97rem;margin-top: 3vh;">
+        <div class="container justify-content-between" style="margin-top: 3vh;">
             <div class="row">
                 <div class="col col-xxl-6 col-12">
                     <div class="articulo text-white container-fluid" style="min-width:38rem;width: 45rem;margin:auto;margin-bottom: 3vh;padding:0%">

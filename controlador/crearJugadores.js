@@ -16,8 +16,8 @@ function puntosActuales() {
     numero = 0;
     for (let index = 0; index < $("input[type='number']").length; index++) {
         const element = $("input[type='number']")[index];
-            numero += parseInt(element.value);
-        
+        numero += parseInt(element.value);
+
     }
 
     let puntosDisponibles = puntosTotales - numero;
@@ -115,18 +115,28 @@ function canviarTipo(e) {
 
     if (carpeta == "posicion") { return }
     let img = document.getElementsByClassName(carpeta)[0];
-    if (e.target.value == "Ninguna" || e.target.value == "Calvo") {
-        img.setAttribute("hidden","");
+    if (e.target.value == "Ninguna" || e.target.value == "Calvo" || e.target.value == "Ninguno") {
+        img.setAttribute("hidden", "");
     } else {
-        if(img.hasAttribute("hidden")){img.removeAttribute("hidden")};
-
-        let ruta = "../imagenes/" + carpeta + "/" + e.target.value + ".png";
-        img.setAttribute("src", ruta);
-        if (carpeta == "boca" || carpeta == "nariz") {
-            return "";
+        if (img.hasAttribute("hidden")) { img.removeAttribute("hidden") };
+        if (carpeta == "ojos") {
+            let ruta = "../imagenes/" + carpeta + "/" + e.target.value + "_2.png";
+            img.setAttribute("src", ruta);
+            document.getElementById(carpeta + "Color").value = "#000000"
+            
+            img = document.getElementsByClassName(carpeta)[1];
+            ruta = "../imagenes/" + carpeta + "/" + e.target.value + ".png";
+            img.setAttribute("src", ruta);
         }
-        document.getElementById(carpeta+"Color").value="#000000"
-        //canviarColor(document.getElementById(carpeta+"Color"));
+        else {
+            let ruta = "../imagenes/" + carpeta + "/" + e.target.value + ".png";
+            img.setAttribute("src", ruta);
+            if (carpeta == "boca" || carpeta == "nariz") {
+                return "";
+            }
+            document.getElementById(carpeta + "Color").value = "#000000"
+            //canviarColor(document.getElementById(carpeta+"Color"));
+        }
     }
 }
 

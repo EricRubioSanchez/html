@@ -14,8 +14,8 @@
 <body>
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
-    <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
-    <div class="articulo text-white container-fluid" style="width: 62.9375rem; margin:auto;margin-top: 10vh;">
+    <main class="main align-items-center justify-content-center justify-content-md-between container-fluid">
+    <div class="articulo text-white container-fluid" style="max-width: 62.9375rem; margin:auto;margin-top: 10vh;">
             <div class="row">
                 <div class="col col-9">
                     <div class="row">
