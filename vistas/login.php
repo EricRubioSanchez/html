@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../estils/headerAside.css">
     <link rel="stylesheet" href="../estils/estilosBasicos.css">
     <title>Document</title>
+
+
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
@@ -46,15 +48,25 @@
 <body>
     <?php include_once("./navs/header.php");
     ?>
-    <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container">
+    <?php if(isset($errors)&&($errors!="")):?>
+    <div class="alert alert-danger d-flex alert-dismissible fade show" role="alert" style="position:absolute; margin-top:15vh; margin-left:33%">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin: auto;" fill="currentColor" class="bi bi-exclamation-triangle-fill me-2" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+        </svg>
+        <div> <?php echo($errors) ?> </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif; ?>
+    <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container" style="padding-left: 0px;">
+
         <div class="articulo text-white container" style="width: 42.9375rem; margin:auto;margin-top: 19vh;">
 
-            <form class="needs-validation px-4 " novalidate>
+            <form class="needs-validation px-4 " novalidate method="POST" action="../controlador/login.php">
                 <div class="container">
                     <h1>Login</h1>
                     <div class="form-group mb-3">
                         <label for="correo">Correo</label>
-                        <input required type="email" class="form-control" style="width:36.3rem;" id="correo" placeholder="example@gmail.com">
+                        <input required <?php if(isset($correu)){ echo("value='".$correu."'");} ?> type="email" class="form-control" style="width:36.3rem;" name="correo" id="correo" placeholder="example@gmail.com">
                         <div class="invalid-feedback">
                             Por favor introduce un correo valido.
                         </div>
@@ -62,7 +74,7 @@
                     <div class="input-group mb-3">
                         <label for="contra">Contraseña</label>
                         <br>
-                        <input required type="password" minlength="6" style="display:inline-block;width:32rem;" class="form-control" id="contra" placeholder="P@ssw0rd">
+                        <input required type="password" minlength="6" style="display:inline-block;width:32rem;" class="form-control" id="contra" name="password" placeholder="P@ssw0rd">
                         <div class="input-group-append">
                             <button onclick="canviarContra()" id="botonContra" class="btn btn-danger pb-1" style="min-height:0px;" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
@@ -79,7 +91,7 @@
                             <button class="boton" type="button" style="width: 16rem;height: 3.4rem;margin-bottom:0.5rem; ">Iniciar Con Google</button>
                         </div>
                         <div class="col col-6">
-                            <a href="./canviarContrasenya.php" class="link-danger nav-link text-end">Contraseña Olvidada?</a>
+                            <a href="./recuperarContrasenya.php" class="link-danger nav-link text-end">Contraseña Olvidada?</a>
                         </div>
                     </div>
                     <div class="row">

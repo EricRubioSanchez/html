@@ -152,7 +152,7 @@ function randomizarStats() {
         range.setAttribute("max",100)
 
         if (puntosDisponibles > 100) {valor = Math.floor(Math.random() * 101)}
-        else{valor = Math.floor(Math.random() * puntosDisponibles+1)}
+        else{valor = Math.floor(Math.random() * puntosDisponibles)}
         puntosDisponibles -= valor;
         element.value =valor;
         range.value =valor;

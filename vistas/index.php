@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <?php include_once("./navs/header.php");
+    <?php session_start();
+     include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
     <main class="main container-fluid">
         <div class="row">
