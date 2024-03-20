@@ -56,13 +56,13 @@
                         <label for="correo">Correo</label>
                         <input required type="email" class="form-control" style="width:36.3rem;" id="correo" placeholder="example@gmail.com">
                         <div class="invalid-feedback">
-                            Por favor un correo valido.
+                            Por favor introduce un correo valido.
                         </div>
                     </div>
                     <div class="input-group mb-3">
                         <label for="contra">Contraseña</label>
                         <br>
-                        <input required type="password" style="display:inline-block;width:32rem;" class="form-control" id="contra" placeholder="P@ssw0rd">
+                        <input required type="password" minlength="6" style="display:inline-block;width:32rem;" class="form-control" id="contra" placeholder="P@ssw0rd">
                         <div class="input-group-append">
                             <button onclick="canviarContra()" id="botonContra" class="btn btn-danger pb-1" style="min-height:0px;" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
@@ -70,7 +70,7 @@
                                 </svg></button>
                         </div>
                         <div class="invalid-feedback">
-                            Por favor una contraseña valida.
+                            Por favor introduce una contraseña de un mínimo de 6 caracteres.
                         </div>
                     </div>
 

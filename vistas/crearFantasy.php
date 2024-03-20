@@ -73,7 +73,6 @@
                     <label for="tipoJugadores" aria-describedby="tipoJugHelp">Tipo de Jugadores</label>
                     <select id="tipoJugadores" class="form-select">
                         <option selected>Bases</option>
-                        <option>Customs</option>
                         <option>Bases y Custom</option>
                     </select>
                     <small id="tipoJugHelp" class="form-text text-info">Los jugadores bases son los que vienen creados por defecto y los custom son los creados por los usuarios.</small>

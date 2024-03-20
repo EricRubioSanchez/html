@@ -15,7 +15,7 @@
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
     <main class="main align-items-center justify-content-center justify-content-md-between container-fluid">
-        <div class="articulo text-white container-fluid" style=" margin-top: 10vh;">
+    <div class="articulo text-white container-fluid" style="margin-top: 10vh;max-width:95rem">
 
             <div class="row">
                 <div class="col col-1">
@@ -25,68 +25,70 @@
                     <div class="col col-12">
                         <h1>Nombre del Equipo</h1>
                     </div>
-                    <div class="col col-12"><h5>Eric Rubio Sanchez</h5></div>
+                    <div class="col col-12">
+                        <h5>Eric Rubio Sanchez</h5>
+                    </div>
                     <div class="col col-12 text-end"> <button onclick="window.location='./ajustes.php';" style="width: 13rem;" class="text-center boton">Ajustes</button></div>
                 </div>
             </div>
         </div>
-        <div class="container justify-content-between" style="margin-top: 3vh;">
+        <div class="container-fluid justify-content-between" style="margin-top: 3vh;">
             <div class="row">
-                <div class="col col-xxl-6 col-12">
+                <div class="col col-xxl-6 col-12" style="margin-inline: auto;width:fit-content;">
                     <div class="articulo text-white container-fluid" style="min-width:38rem;width: 45rem;margin:auto;margin-bottom: 3vh;padding:0%">
-                    <div>
-                        <div class="card" style="width: 10rem;position:absolute;margin-left:7rem;margin-top:2rem;">
-                            <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
-                                <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
-                                <hr style="margin: 0%;">
-                                <div>
-                                    <h5 class="card-title text-white">C - Jarret Allen</h5>
-                                </div>
-                            </button>
+                        <div>
+                            <div class="card" style="width: 10rem;position:absolute;margin-left:7rem;margin-top:2rem;">
+                                <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
+                                    <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
+                                    <hr style="margin: 0%;">
+                                    <div>
+                                        <h5 class="card-title text-white">C - Jarret Allen</h5>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="card" style="width: 10rem;position:absolute;margin-left:31rem;margin-top:8rem;">
+                                <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
+                                    <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
+                                    <hr style="margin: 0%;">
+                                    <div>
+                                        <h5 class="card-title text-white">SF - Jarret Allen</h5>
+                                    </div>
+
+                                </button>
+                            </div>
+                            <div class="card" style="width: 10rem;position:absolute;margin-left:3rem;margin-top:15rem;">
+                                <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
+                                    <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
+                                    <hr style="margin: 0%;">
+                                    <div>
+                                        <h5 class="card-title text-white">PF - Jarret Allen</h5>
+                                    </div>
+
+                                </button>
+                            </div>
+                            <div class="card" style="width: 10rem;position:absolute;margin-left:17rem;margin-top:28rem;">
+                                <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
+                                    <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
+                                    <hr style="margin: 0%;">
+                                    <div>
+                                        <h5 class="card-title text-white">PG - Jarret Allen</h5>
+                                    </div>
+
+                                </button>
+                            </div>
+                            <div class="card" style="width: 10rem;position:absolute;margin-left:33rem;margin-top:31rem;">
+                                <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
+                                    <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
+                                    <hr style="margin: 0%;">
+                                    <div>
+                                        <h5 class="card-title text-white">SG - Jarret Allen</h5>
+                                    </div>
+
+                                </button>
+                            </div>
                         </div>
-                        <div class="card" style="width: 10rem;position:absolute;margin-left:31rem;margin-top:8rem;">
-                            <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
-                                <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
-                                <hr style="margin: 0%;">
-                                <div>
-                                    <h5 class="card-title text-white">SF - Jarret Allen</h5>
-                                </div>
-                                
-                            </button>
-                        </div>
-                        <div class="card" style="width: 10rem;position:absolute;margin-left:3rem;margin-top:15rem;">
-                            <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
-                                <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
-                                <hr style="margin: 0%;">
-                                <div>
-                                    <h5 class="card-title text-white">PF - Jarret Allen</h5>
-                                </div>
-                                
-                            </button>
-                        </div>
-                        <div class="card" style="width: 10rem;position:absolute;margin-left:17rem;margin-top:28rem;">
-                            <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
-                                <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
-                                <hr style="margin: 0%;">
-                                <div>
-                                    <h5 class="card-title text-white">PG - Jarret Allen</h5>
-                                </div>
-                                
-                            </button>
-                        </div>
-                        <div class="card" style="width: 10rem;position:absolute;margin-left:33rem;margin-top:31rem;">
-                            <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
-                                <img src="../imagenes/mii.png" class="card-img-top" alt="ImagenDelJugador">
-                                <hr style="margin: 0%;">
-                                <div>
-                                    <h5 class="card-title text-white">SG - Jarret Allen</h5>
-                                </div>
-                                
-                            </button>
-                        </div>
-</div>
-                        
-                        
+
+
                         <svg id="svg" viewBox="0 0 255 255" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15,70 a5,6 0 0,0 225,0" stroke="#dd0000" fill="none" />
                             <path d="M66,127 a1,1 0 0,0 122,0" stroke="#dd0000" fill="none"></path>
@@ -118,7 +120,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="col col-xxl-5 col-12" style="margin-left: auto;">
+                <div class="col col-xxl-5 col-12" style="margin-inline: auto;width:fit-content;">
                     <div class="articulo text-white container-fluid" style="margin:auto;max-width:max-content;">
                         <div class="row">
                             <div class="col col-12" style="margin: auto;">
@@ -133,7 +135,9 @@
                                 </div>
                                 <div class="col col-9">
                                     <div class="row">
-                                        <div class="col col-6 nombre" style="margin: auto;"><h4>Jarret Allen</h4></div>
+                                        <div class="col col-6 nombre" style="margin: auto;">
+                                            <h4>Jarret Allen</h4>
+                                        </div>
 
                                         <div class="col col-2 text-center">
                                             <a class="favoritos" href="#">
@@ -202,7 +206,9 @@
                                 </div>
                                 <div class="col col-9">
                                     <div class="row">
-                                        <div class="col col-6" style="margin: auto;"><h4>Jarret Allen</h4></div>
+                                        <div class="col col-6" style="margin: auto;">
+                                            <h4>Jarret Allen</h4>
+                                        </div>
 
                                         <div class="col col-2 text-center">
                                             <a href="#">

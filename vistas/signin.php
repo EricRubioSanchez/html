@@ -62,12 +62,12 @@
                     <label for="correo">Correo</label>
                     <input required type="email" class="form-control" id="correo" style="width:38rem;" placeholder="example@gmail.com">
                     <div class="invalid-feedback">
-                        Por favor un correo valido.
+                        Por favor introduce un correo valido.
                     </div>
                 </div>
 
                 <div class="input-group mb-3">
-                <label for="contra">Contraseña</label>
+                    <label for="contra">Contraseña</label>
                     <br>
                     <input required type="password" style="display:inline-block;width:35rem;" class="form-control" id="contra" placeholder="P@ssw0rd">
                     <div class="input-group-append">
@@ -77,7 +77,7 @@
                             </svg></button>
                     </div>
                     <div class="invalid-feedback">
-                        Por favor una contraseña valida.
+                        Por favor introduce una contraseña de un mínimo de 6 caracteres.
                     </div>
                 </div>
 

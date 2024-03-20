@@ -16,7 +16,7 @@
     include_once("./navs/aside.php") ?>
     <main class="main align-items-center justify-content-center justify-content-md-between container-fluid">
         <div class="articulo text-white container-fluid" style="max-width: 62.9375rem; margin:auto;margin-top: 14vh;min-width:28rem;">
-        <a href="../vistas/MiEquipo.php" class="nav-link link-light" >
+        <a href="../vistas/miEquipo.php" class="nav-link link-light" >
             <div class="row">
                 <div class="col col-2 col-md-2 col-xl-1">
                 <img class="imagen " style="width: 6rem;" src="../imagenes/mii.png">

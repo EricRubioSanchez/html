@@ -2,12 +2,34 @@
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 ">
 
         <div class="col col-3 col-xl-4 text-center"></div>
-        <div class="col col-2 text-center"><a href="./index.php" class="nav-link px-2 link-danger" aria-current="page"><strong>NOTICIAS</strong></a></div>
-        <div class="col col-2 text-center"><a href="./crearFantasy.php" class="nav-link px-2 link-light alink"><strong>CREAR FANTASY</strong></a></div>
-        <div class="col col-2 text-center"><a href="./unirseFantasy.php" class="nav-link px-2 link-light alink"><strong>UNIRSE FANTASY</strong></a></div>
+        <div class="col col-2 text-center">
+            <a href="./index.php" <?php if ($noticiasActive) : ?> class="nav-link link-danger " aria-current="page">
+      <?php else : ?> class="nav-link link-light alink">
+      <?php endif; ?>
+                <strong>NOTICIAS</strong>
+            </a>
+        </div>
+        <div class="col col-2 text-center">
+            <a href="./crearFantasy.php" <?php if ($crearFantasyActive) : ?> class="nav-link link-danger " aria-current="page">
+      <?php else : ?> class="nav-link link-light alink">
+      <?php endif; ?>
+                <strong>CREAR FANTASY</strong>
+            </a>
+        </div>
+        <div class="col col-2 text-center">
+            <a href="./unirseFantasy.php" <?php if ($unirseFantasyActive) : ?> class="nav-link link-danger " aria-current="page">
+      <?php else : ?> class="nav-link link-light alink">
+      <?php endif; ?>
+                <strong>UNIRSE FANTASY</strong>
+            </a>
+        </div>
         <div class="col col-xl-2 col-1 text-end">
-        
-        <a href="./Login.php" class="nav-link px-2 link-light alink"><strong>LOGIN</strong></a>
+
+            <a href="./login.php"<?php if ($loginActive) : ?> class="nav-link px-2 link-danger " aria-current="page">
+      <?php else : ?> class="nav-link px-2 link-light alink">
+      <?php endif; ?>
+                <strong>LOGIN</strong>
+            </a>
             <!--
             <div class="dropdown text-end">
                 120
@@ -27,7 +49,7 @@
                     <li><a class="dropdown-item" href="#"><strong>LOG OUT</strong></a></li>
                 </ul>
             </div>
-            -->
+      -->
         </div>
     </header>
 </div>

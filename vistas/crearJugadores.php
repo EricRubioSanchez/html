@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../estils/headerAside.css">
     <link rel="stylesheet" href="../estils/estilosBasicos.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script defer src="../controlador/crearJugadores.js"></script>
+    <script defer src="../js/crearJugadores.js"></script>
     <title>Document</title>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -44,9 +44,13 @@
                     <div class="row">
                         <div class="col col-xl-6 col-12">
                             <div class="row">
-                                <div class="col col-12">
+                                <div class="col col-9">
                                     <h1>Crear Jugadores</h1>
                                 </div>
+                                <div class="col col-3"><button style="width: 3.5rem;" id="randomStats" class="boton" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
+                                            <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
+                                        </svg></button></div>
                             </div>
                             <div class="row">
                                 <div class="col col-12">
@@ -201,6 +205,10 @@
                             <div class="row">
                                 <div class="col col-12">
                                     <h2 style="display: flex;">Puntos Disponibles: <div class="ms-2" id="puntos"></div>
+                                        <div style="margin-left: auto;" class="text-end"><button style="width: 3.5rem;" id="randomStyle" class="boton" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
+                                                </svg></button></div>
                                     </h2>
                                 </div>
                             </div>
@@ -304,7 +312,7 @@
                                                 <img alt="Nariz del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/nariz.png">
                                                 <img alt="Pupilas del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/ojos/Predeterminados_2.png">
                                                 <img alt="Ojos del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/ojos/Predeterminados.png">
-                                                <img alt="Accesorios del Personaje" class="accesorios" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/accesorios/Aviador.png">
+                                                <img alt="Accesorios del Personaje" class="accesorios" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/accesorios/GafasAviador.png">
                                                 <img alt="Imagen del Personaje" class="pelo" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/pelo/Largo.png">
                                             </div>
 
@@ -350,13 +358,23 @@
                                 <div class="col col-12">
                                     <div class="form-group mb-1 mt-2">
                                         <div class="row">
-                                            <div class="col col-8"><label for="posicion">Posicion</label></div>
+                                            <div class="col col-8"><label for="posicion1">Posicion</label></div>
                                             <div class="col col-4"><label for="piel">Piel</label></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col col-8">
-                                                <select id="posicion" class="form-select">
+                                            <div class="col col-4">
+                                                <select id="posicion1" class="form-select">
                                                     <option selected>C</option>
+                                                    <option>PG</option>
+                                                    <option>SG</option>
+                                                    <option>PF</option>
+                                                    <option>SF</option>
+                                                </select>
+                                            </div>
+                                            <div class="col col-4">
+                                                <select id="posicion2" class="form-select">
+                                                    <option selected>Ninguna</option>
+                                                    <option hidden disabled>C</option>
                                                     <option>PG</option>
                                                     <option>SG</option>
                                                     <option>PF</option>
@@ -374,7 +392,7 @@
                                 <div class="col col-12">
                                     <div class="form-group mb-1 mt-2">
                                         <div class="row">
-                                            <div class="col col-12"><label for="posicion">Nombre</label></div>
+                                            <div class="col col-12"><label for="nombre">Nombre</label></div>
                                         </div>
                                         <div class="row">
                                             <div class="col col-12">

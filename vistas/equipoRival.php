@@ -15,7 +15,7 @@
     <?php include_once("./navs/header.php");
     include_once("./navs/aside.php") ?>
     <main class="main align-items-center justify-content-center justify-content-md-between container-fluid">
-        <div class="articulo text-white container-fluid" style="width: 95.4rem; margin-top: 10vh;">
+        <div class="articulo text-white container-fluid" style="margin-top: 10vh;max-width:95rem">
 
             <div class="row">
                 <div class="col col-1">
@@ -25,14 +25,14 @@
                     <div class="col col-12">
                         <h1>Equipo 2</h1>
                     </div>
-                    <div class="col col-12">Dani Torres</div>
+                    <div class="col col-12"><h5>Dani Torres</h5></div>
                     <div class="col col-12 text-end"> <button onclick="window.location='./tradear.php';" style="width: 13rem;" class="text-center boton">Tradear</button></div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid justify-content-between" style="width: 97rem;margin-top: 3vh;">
+        <div class="container-fluid justify-content-between" style="margin-top: 3vh;">
             <div class="row">
-                <div class="col col-xxl-6 col-12">
+                <div class="col col-xxl-6 col-12" style="margin-inline: auto;width:fit-content;">
                     <div class="articulo text-white container-fluid" style="min-width:38rem;width: 45rem;margin:auto;margin-bottom: 3vh;padding:0%">
                         <div class="card" style="width: 10rem;position:absolute;margin-left:7rem;margin-top:2rem;">
                             <button class="text-white" style="background-color: #2D2D2D;border: 1px solid;">
@@ -116,8 +116,8 @@
                         </svg>
                     </div>
                 </div>
-                <div class="col col-xxl-5 col-12" style="margin-left: auto;">
-                    <div class="articulo text-white container-fluid" style="margin:auto;max-width:max-content;">
+                <div class="col col-xxl-5 col-12" style="margin-inline: auto;width:fit-content;">
+                    <div class="articulo text-white container-fluid" style="margin:auto;">
                         <div class="row">
                             <div class="col col-12" style="margin: auto;">
                                 <h2>Jugadores</h2>

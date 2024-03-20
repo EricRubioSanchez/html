@@ -110,40 +110,111 @@ function agafarColor(e) {
     canviarColor(e.target);
 }
 
-function canviarTipo(e) {
-    let carpeta = e.target.getAttribute("id");
+function agafarTipo(e) {
+    
+    canviarTipo(e.target);
+}
 
-    if (carpeta == "posicion") { return }
+function canviarTipo(e) {
+    let carpeta = e.getAttribute("id");
+    if (carpeta == "posicion1"||carpeta == "posicion2") { return }
     let img = document.getElementsByClassName(carpeta)[0];
-    if (e.target.value == "Ninguna" || e.target.value == "Calvo" || e.target.value == "Ninguno") {
+    if (e.value == "Ninguna" || e.value == "Calvo" || e.value == "Ninguno") {
         img.setAttribute("hidden", "");
     } else {
         if (img.hasAttribute("hidden")) { img.removeAttribute("hidden") };
         if (carpeta == "ojos") {
-            let ruta = "../imagenes/" + carpeta + "/" + e.target.value + "_2.png";
+            let ruta = "../imagenes/" + carpeta + "/" + e.value + "_2.png";
             img.setAttribute("src", ruta);
             document.getElementById(carpeta + "Color").value = "#000000"
-            
+
             img = document.getElementsByClassName(carpeta)[1];
-            ruta = "../imagenes/" + carpeta + "/" + e.target.value + ".png";
+            ruta = "../imagenes/" + carpeta + "/" + e.value + ".png";
             img.setAttribute("src", ruta);
         }
         else {
-            let ruta = "../imagenes/" + carpeta + "/" + e.target.value + ".png";
+            let ruta = "../imagenes/" + carpeta + "/" + e.value + ".png";
             img.setAttribute("src", ruta);
-            if (carpeta == "boca" || carpeta == "nariz") {
+            if (carpeta == "boca" || carpeta == "accesorios") {
                 return "";
             }
-            document.getElementById(carpeta + "Color").value = "#000000"
+            //document.getElementById(carpeta + "Color").value = "#000000"
             //canviarColor(document.getElementById(carpeta+"Color"));
         }
     }
 }
 
+function randomizarStats() {
+    puntosDisponibles = puntosTotales;
+    for (let index = 0; index < $("input[type='number']").length; index++) {
+        const element = $("input[type='number']")[index];
+        let range = element.parentElement.children[0];
+        range.setAttribute("max",100)
+
+        if (puntosDisponibles > 100) {valor = Math.floor(Math.random() * 101)}
+        else{valor = Math.floor(Math.random() * puntosDisponibles+1)}
+        puntosDisponibles -= valor;
+        element.value =valor;
+        range.value =valor;
+    }
+    puntosActuales();
+    calcularMaximos();
+    
+
+}
+
+function randomizarStyle(){
+    for (let index = 0; index < $("select").length; index++) {
+        const element = $("select")[index];
+        valor = Math.floor(Math.random() * element.children.length)
+        element.value=element.children[valor].value;
+        canviarTipo(element);
+        if(document.getElementById(element.getAttribute("id")+"Color")){
+            document.getElementById(element.getAttribute("id")+"Color").value="#"+Math.floor(Math.random()*16777215).toString(16);
+        }
+    }
+    canviarPosicion()
+    document.getElementById("piel").value="#"+Math.floor(Math.random()*16777215).toString(16);
+    canviarColor(document.getElementById("piel"))
+
+
+}
+
+
+
+function canviarPosicion(){
+    let sel = document.getElementById("posicion1");
+
+    if(sel.value==document.getElementById("posicion2").value){
+        document.getElementById("posicion2").value="Ninguna"
+    }
+    for (let index = 0; index < sel.children.length; index++) {
+        const element = sel.children[index];
+        if(element.selected){
+
+            document.getElementById("posicion2").children[index+1].setAttribute("hidden","")
+            document.getElementById("posicion2").children[index+1].setAttribute("disabled","")
+        }else{
+            document.getElementById("posicion2").children[index+1].removeAttribute("disabled")
+            document.getElementById("posicion2").children[index+1].removeAttribute("hidden")
+        }
+        
+    }
+}
+function imgLoaded(e){
+    if(document.getElementById(e.target.getAttribute("class")+"Color")){
+        canviarColor(document.getElementById(e.target.getAttribute("class")+"Color"))
+    }
+}
+
 let numero = 0;
-let puntosTotales = 400;
+const puntosTotales = 400;
 document.getElementById("puntos").innerHTML = puntosTotales;
 
+document.getElementById("posicion1").addEventListener("change",canviarPosicion)
+
+document.getElementById("randomStats").addEventListener("click", randomizarStats);
+document.getElementById("randomStyle").addEventListener("click", randomizarStyle);
 
 $("input[type='range']").on("input", canviarRange);
 $("input[type='number']").on("input", canviarNumber);
@@ -152,4 +223,5 @@ $("input[type='range']").on("change", calcularMaximos);
 $("input[type='number']").on("change", calcularMaximos);
 
 $("input[type='color']").on("input", agafarColor);
-$('select').on("change", canviarTipo);
+$('select').on("change", agafarTipo);
+$("img").on('load', imgLoaded)
