@@ -124,16 +124,16 @@ function canviarTipo(e) {
     } else {
         if (img.hasAttribute("hidden")) { img.removeAttribute("hidden") };
         if (carpeta == "ojos") {
-            let ruta = "../imagenes/" + carpeta + "/" + e.value + "_2.png";
+            let ruta = "../imagenes/creacion/" + carpeta + "/" + e.value + "_2.png";
             img.setAttribute("src", ruta);
             document.getElementById(carpeta + "Color").value = "#000000"
 
             img = document.getElementsByClassName(carpeta)[1];
-            ruta = "../imagenes/" + carpeta + "/" + e.value + ".png";
+            ruta = "../imagenes/creacion/" + carpeta + "/" + e.value + ".png";
             img.setAttribute("src", ruta);
         }
         else {
-            let ruta = "../imagenes/" + carpeta + "/" + e.value + ".png";
+            let ruta = "../imagenes/creacion/" + carpeta + "/" + e.value + ".png";
             img.setAttribute("src", ruta);
             if (carpeta == "boca" || carpeta == "accesorios") {
                 return "";

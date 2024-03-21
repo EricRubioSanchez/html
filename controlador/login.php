@@ -40,7 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 //$nom = buscarNombre($correu);
                 $admin= esAdmin($correu);
                 $idLiga=buscarLiga($correu);
-                iniciarSession($correu,false,$idLiga);
+                $imagen=tieneImagen($correu);
+                iniciarSession($correu,$admin,$idLiga,$imagen);
             } else {
                 $errors .= "Autentificación errónea. <br>";
             }

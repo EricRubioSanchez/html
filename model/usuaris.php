@@ -99,7 +99,7 @@ function crearUsuari($nom,$correu,$password){
       $result=executarSentencia($setencia,$array,$conexio);
     
       $conexio=tancarBDD($conexio);
-      return $result[0]['nom'];
+      return $result[0]['nombre'];
     }
   }
 
@@ -115,6 +115,20 @@ function crearUsuari($nom,$correu,$password){
       return true;
     }
   }
+
+  function tieneImagen($correu){
+    $conexio=obrirBDD();
+    if(!is_null($conexio)){
+      $setencia = "SELECT imagen FROM `usuaris` WHERE correu = :correu;";
+      $array=array(':correu' => $correu);
+    
+      $result=executarSentencia($setencia,$array,$conexio);
+      $conexio=tancarBDD($conexio);
+      if(($result[0]['imagen'])==0){return false;}
+      return true;
+    }
+  }
+  
   
   
   /**

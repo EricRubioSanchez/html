@@ -69,7 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 //$nom = buscarNombre($correu);
                 $admin= esAdmin($correu);
                 $idLiga=buscarLiga($correu);
-                iniciarSession($correu,false,$idLiga);;
+                $imagen=tieneImagen($correu);
+                iniciarSession($correu,false,$idLiga,$imagen);
             } catch(PDOException $e) {
                 $errors .= "Error con la conexión de la base de datos. <br>";
             }

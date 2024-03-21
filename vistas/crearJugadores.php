@@ -307,15 +307,15 @@
                                         <div class="row">
                                             <div class="col col-8"><label for="accesorios">Accesorios</label></div>
                                             <div class="col col-4">
-                                                <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/cuerpo.png">
-                                                <img alt="Imagen del Personaje" class="piel" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/cabeza.png">
-                                                <img alt="Boca del Personaje" class="boca" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/boca/Predeterminada.png">
-                                                <img alt="Barba del Personaje" class="barba" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/barba/Perilla.png">
-                                                <img alt="Nariz del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/nariz.png">
-                                                <img alt="Pupilas del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/ojos/Predeterminados_2.png">
-                                                <img alt="Ojos del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/ojos/Predeterminados.png">
-                                                <img alt="Accesorios del Personaje" class="accesorios" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/accesorios/GafasAviador.png">
-                                                <img alt="Imagen del Personaje" class="pelo" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/pelo/Largo.png">
+                                                <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/cuerpo.png">
+                                                <img alt="Imagen del Personaje" class="piel" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/cabeza.png">
+                                                <img alt="Boca del Personaje" class="boca" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/boca/Predeterminada.png">
+                                                <img alt="Barba del Personaje" class="barba" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/creacion/barba/Perilla.png">
+                                                <img alt="Nariz del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/nariz.png">
+                                                <img alt="Pupilas del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/ojos/Predeterminados_2.png">
+                                                <img alt="Ojos del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/ojos/Predeterminados.png">
+                                                <img alt="Accesorios del Personaje" class="accesorios" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/creacion/accesorios/GafasAviador.png">
+                                                <img alt="Imagen del Personaje" class="pelo" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/creacion/pelo/Largo.png">
                                             </div>
 
                                         </div>

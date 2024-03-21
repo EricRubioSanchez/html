@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../estils/headerAside.css">
     <link rel="stylesheet" href="../estils/estilosBasicos.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="../js/perfil.js"></script>
     <title>Document</title>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -44,19 +46,38 @@
 </head>
 
 <body>
-<?php session_start();
-     include_once("./navs/header.php");
-     if ($_SESSION['idLiga']!=0){
-    include_once("./navs/aside.php");} ?>
+    <?php
+    include_once("./navs/header.php");
+    if ($_SESSION['idLiga'] != 0) {
+        include_once("./navs/aside.php");
+    } ?>
+
+    <?php if (isset($errors) && ($errors != "")) : ?>
+        <div class="alert alert-danger d-flex alert-dismissible fade show" role="alert" style="position:absolute; margin-top:15vh; margin-left:28%">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin: auto;" fill="currentColor" class="bi bi-exclamation-triangle-fill me-2" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+            </svg>
+            <div> <?php echo ($errors) ?> </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
+
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
         <div class="articulo text-white container" style="width: 66.4rem; margin-top: 17vh;">
-            <form class="needs-validation px-4 " novalidate>
+            <form class="needs-validation px-4 " novalidate method="POST" action="../controlador/perfil.php" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col col-12">
+                    <div class="col col-6">
                         <h1>Perfil</h1>
                     </div>
+                    <div class="col col-6 text-end">
+                        <button class="boton" type="button" style="height: 3.4rem;width:15rem;">Eliminar Perfil</button>
+                    </div>
                     <div class="col col-4 text-center">
-                        <img class="imagen " style="width: 18rem;" src="../imagenes/mii.png">
+                        <img class="imagen " id="imagen" style="width: 18rem;" src=<?php if ($_SESSION['idLiga'] != 0) {
+                                                                                        echo ('"../imagenes/usuarios/' . $_SESSION['correo'] . '"');
+                                                                                    } else {
+                                                                                        echo ('"../imagenes/default.png"');
+                                                                                    } ?>>
                     </div>
                     <div class="col col-8">
                         <div class="row">
@@ -65,7 +86,11 @@
                                     <label for="nombre">Nombre Completo</label>
                                     <div class="row">
 
-                                        <input required type="text" style="width:20rem;" class="form-control ms-2" id="nombre" value="Eric Rubio Sanchez">
+                                        <input required type="text" style="width:20rem;" name="nombre" class="form-control ms-2" id="nombre" placeholder="Name" <?php if (isset($nom)) {
+                                                                                                                                                                    echo ("value='" . $nom . "'");
+                                                                                                                                                                } else {
+                                                                                                                                                                    echo ("value='" . $nomBD . "'");
+                                                                                                                                                                } ?>>
 
                                     </div>
                                     <div class="invalid-feedback">
@@ -75,7 +100,7 @@
                                 <div class="form-group mb-3 mt-5">
                                     <label for="contra">Contraseña</label>
                                     <div class="input-group mb-3">
-                                        <input required type="password" style="width:16rem;" class="form-control " id="contra" value="P@ssw0rd">
+                                        <input required type="password" minlength="6" name="contra" style="width:16rem;" class="form-control " id="contra" placeholder="P@ssw0rd">
                                         <div class="input-group-append">
                                             <button onclick="canviarContra()" id="botonContra" class="btn btn-danger pb-1" style="min-height:0px;" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
@@ -94,15 +119,15 @@
                 <div class="row">
                     <div class="col col-4 mt-3 text-center">
                         <input class="boton" type="button" value="Cambiar Logo" onclick="document.getElementById('selectedFile').click();" style="height: 3.4rem;width:15rem;" />
-                        <input type="file" id="selectedFile" accept="image/png" ; style="display: none;" />
+                        <input type="file" name="file" id="selectedFile" accept="image/png" ; style="display: none;" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col col-12 text-end mt-2">
-                        <button class="boton" type="button" style="height: 3.4rem;width:15rem;">Eliminar Perfil</button>
+                        <button class="boton" id="cancelar" type="reset" style="height: 3.4rem;width:15rem;">Cancelar Cambios</button>
                     </div>
                     <div class="col col-12 text-end mt-2">
-                        <button class="boton" type="submit" style="height: 3.4rem;width:15rem;">Guardar Cambios</button>
+                        <button class="boton" id="enviar" type="submit" disabled style="height: 3.4rem;width:15rem;background-color:grey">Guardar Cambios</button>
                     </div>
                 </div>
             </form>
