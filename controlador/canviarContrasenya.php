@@ -51,17 +51,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //Agafem les variables del formulari i les enviem a una funcio del controlador en la que tartem d'evitar l'injeccio de codi.
     $password = tractarDades($_POST["contra1"]);
     $password2 = tractarDades($_POST["contra2"]);
+    if(!isset($_SESSION["correu"])){
+        session_start();
+    }
+    $correu=$_SESSION["correu"];
+    $token=$_SESSION["token"];
+    $errors ="";
+    $errors .= validarDadesGET($correu, $token);
 
     //Crida la funcio validarDades on em retorna un string amb tots els erros de les validacions.
     $errors .= validarDadesPOST($password, $password2);
     if ($errors == "") {
         if (existeixUsuari($correu)) {
-            if (comprovarContrasenya($correu, $password)) {
+            $passwordENC = password_hash($password,PASSWORD_BCRYPT);
+            try {
+                canviarContrasenya($correu, $passwordENC);
                 //$nom = buscarNombre($correu);
                 $admin= esAdmin($correu);
                 iniciarSession($correu,$admin);
-            } else {
-                $errors .= "Autentificación errónea. <br>";
+            } catch(PDOException $e) {
+                $errors .= "Error con la conexión de la base de datos. <br>";
             }
         } else {
             $errors .= "El usuario no existe en la base de datos. <br>";

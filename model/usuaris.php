@@ -146,7 +146,7 @@ function crearUsuari($nom,$correu,$password){
  */
 function canviarContrasenya($correu,$password){
     $conexio=obrirBDD();
-    $setencia = "UPDATE usuaris SET contrasenya = :contrasenya WHERE correu = :correu ;";
+    $setencia = "UPDATE usuaris SET password = :contrasenya WHERE correu = :correu ;";
     $array=array(':contrasenya' => $password,':correu' => $correu);
     $result=executarSentencia($setencia,$array,$conexio);
     $conexio=tancarBDD($conexio); 

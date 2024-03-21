@@ -104,10 +104,6 @@
                         Por favor introduce una contraseña de un mínimo de 6 caracteres.
                     </div>
                 </div>
-
-                <button class="boton mt-3" type="button" style="width: 16rem;height: 3.4rem;margin-bottom:0.5rem; ">Iniciar Con Google</button>
-                <br>
-
                 <button class="boton" type="submit" style="width: -webkit-fill-available;height: 3.4rem;">Enviar</button>
             </form>
         </div>
