@@ -2,6 +2,7 @@
 //Eric Rubio Sanchez
 require_once("env.php");
 require_once("usuaris.php");
+require_once("ligasFantasy.php");
 
 /**
  * Summary of obrirBDD

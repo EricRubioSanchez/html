@@ -40,6 +40,12 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        <?php if ($_SESSION["admin"]) : ?>
+                            <li><a class="dropdown-item" href="./admin.php"><strong>ADMIN</strong></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        <?php endif; ?>
                         <li><a class="dropdown-item" href="./logout.php"><strong>LOG OUT</strong></a></li>
                     </ul>
                 </div>

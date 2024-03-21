@@ -68,7 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 canviarContrasenya($correu, $passwordENC);
                 //$nom = buscarNombre($correu);
                 $admin= esAdmin($correu);
-                iniciarSession($correu,$admin);
+                $idLiga=buscarLiga($correu);
+                iniciarSession($correu,false,$idLiga);;
             } catch(PDOException $e) {
                 $errors .= "Error con la conexión de la base de datos. <br>";
             }

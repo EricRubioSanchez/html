@@ -12,8 +12,10 @@
 </head>
 
 <body>
-    <?php include_once("./navs/header.php");
-    include_once("./navs/aside.php") ?>
+<?php session_start();
+     include_once("./navs/header.php");
+     if ($_SESSION['idLiga']!=0){
+    include_once("./navs/aside.php");} ?>
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container">
         <div class="articulo text-white container" style="width: 62.9375rem; margin:auto;margin-top: 10vh;margin-bottom: 4vh;">
             <div class="row">

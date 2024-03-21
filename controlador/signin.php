@@ -51,7 +51,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         $passwordENC = password_hash($password,PASSWORD_BCRYPT);
         if(!existeixUsuari($correu)){
             crearUsuari($nom,$correu,$passwordENC);
-            iniciarSession($correu,false);}
+            $idLiga=buscarLiga($correu);
+            iniciarSession($correu,false,0);}
         else{
             $errors.="Este correo ya existe en la base de datos.";
         }

@@ -39,7 +39,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (comprovarContrasenya($correu, $password)) {
                 //$nom = buscarNombre($correu);
                 $admin= esAdmin($correu);
-                iniciarSession($correu,$admin);
+                $idLiga=buscarLiga($correu);
+                iniciarSession($correu,false,$idLiga);
             } else {
                 $errors .= "Autentificación errónea. <br>";
             }

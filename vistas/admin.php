@@ -21,12 +21,12 @@
         <div class="articulo text-white container-fluid" style="width: 82.9375rem; margin:auto;margin-top: 13vh; padding-top:3rem;padding-left:3rem;">
             <div class="row">
                 <div class="col col-12">
-                    <h1>Jugadores Custom</h1>
+                    <h1>Jugadores Bases</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col col-12 text-end">
-                    <button onclick="window.location='./crearJugadores.php';" style="width: 13rem;" class="text-center boton">Nuevo Jugador</button>
+                    <button onclick="window.location='./crearJugadoresBases.php';" style="width: 13rem;" class="text-center boton">Nuevo Jugador</button>
                     <button  style="width: 13rem;" class="boton text-center">Guardar Archivo</button>
                     <input class="boton" type="button" value="Cargar Archivo" onclick="document.getElementById('selectedFile').click();" style="width: 13rem;" />
                     <input type="file" id="selectedFile" accept=".json" style="display: none;" />

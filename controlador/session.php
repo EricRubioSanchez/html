@@ -20,12 +20,13 @@ function tractarDades($data) {
  * @param String $nom el nom del usuari
  * @return void
  */
-function iniciarSession($correo,$admin){
+function iniciarSession($correo,$admin,$idLiga){
     ini_set('session.gc_maxlifetime', 1500);
     ini_set('session.cookie-lifetime', 1500);
     session_start();
     $_SESSION["correo"]=$correo;
     $_SESSION["admin"]=$admin;
+    $_SESSION["idLiga"]=$idLiga;
     header("Location: ../controlador/index.php");
     exit();
 
