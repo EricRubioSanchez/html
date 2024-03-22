@@ -103,6 +103,15 @@ function crearUsuari($nom,$correu,$password){
     }
   }
 
+  function canviarNombre($correu,$nombre){
+    $conexio=obrirBDD();
+    $setencia = "UPDATE usuaris SET nombre = :nombre WHERE correu = :correu ;";
+    $array=array(':nombre' => $nombre,':correu' => $correu);
+    $result=executarSentencia($setencia,$array,$conexio);
+    $conexio=tancarBDD($conexio); 
+    
+  }
+
   function esAdmin($correu){
     $conexio=obrirBDD();
     if(!is_null($conexio)){
@@ -129,6 +138,14 @@ function crearUsuari($nom,$correu,$password){
     }
   }
   
+  function canviarImagen($correu){
+    $conexio=obrirBDD();
+    $setencia = "UPDATE usuaris SET imagen = 1 WHERE correu = :correu ;";
+    $array=array(':correu' => $correu);
+    $result=executarSentencia($setencia,$array,$conexio);
+    $conexio=tancarBDD($conexio); 
+    
+  }
   
   
   /**

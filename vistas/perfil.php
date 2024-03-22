@@ -62,6 +62,16 @@
         </div>
     <?php endif; ?>
 
+    <?php if (isset($correcte) && ($correcte != "")) : ?>
+        <div class="alert alert-success d-flex alert-dismissible fade show" role="alert" style="position:absolute; margin-top:15vh; margin-left:28%">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin: auto;" fill="currentColor" class="bi bi-check-circle-fill me-2" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+            </svg>
+            <div> <?php echo ($correcte) ?> </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif; ?>
+
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
         <div class="articulo text-white container" style="width: 66.4rem; margin-top: 17vh;">
             <form class="needs-validation px-4 " novalidate method="POST" action="../controlador/perfil.php" enctype="multipart/form-data">
@@ -73,8 +83,8 @@
                         <button class="boton" type="button" style="height: 3.4rem;width:15rem;">Eliminar Perfil</button>
                     </div>
                     <div class="col col-4 text-center">
-                        <img class="imagen " id="imagen" style="width: 18rem;" src=<?php if ($_SESSION['idLiga'] != 0) {
-                                                                                        echo ('"../imagenes/usuarios/' . $_SESSION['correo'] . '"');
+                        <img class="imagen " id="imagen" style="width: 18rem;" src=<?php if ($_SESSION['imagen'] != 0) {
+                                                                                        echo ('"../imagenes/usuarios/' . $_SESSION['correo'] . '.png"');
                                                                                     } else {
                                                                                         echo ('"../imagenes/default.png"');
                                                                                     } ?>>
@@ -100,7 +110,7 @@
                                 <div class="form-group mb-3 mt-5">
                                     <label for="contra">Contraseña</label>
                                     <div class="input-group mb-3">
-                                        <input required type="password" minlength="6" name="contra" style="width:16rem;" class="form-control " id="contra" placeholder="P@ssw0rd">
+                                        <input type="password" minlength="6" name="contra" style="width:16rem;" class="form-control " id="contra" placeholder="P@ssw0rd">
                                         <div class="input-group-append">
                                             <button onclick="canviarContra()" id="botonContra" class="btn btn-danger pb-1" style="min-height:0px;" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />

@@ -38,11 +38,11 @@ function guardarImagen($imatge, $correo)
     if($imatge["size"] > 0){
         // guardem la imatge a la carpeta de imatges
         $target_dir = "../imagenes/usuarios/";
-        $target_file = $target_dir . basename($imatge["name"]);
+        $target_file = $target_dir . basename($correo.".png");
 
         // Si ja exiesteix una imatge amb el mateix nom, canviem el nom de la imatge abans de guardar-la
         
-        move_uploaded_file($correo.".png", $target_file);
+        move_uploaded_file($imatge["tmp_name"], $target_file);
         
     }
 }

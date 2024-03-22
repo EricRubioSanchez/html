@@ -35,7 +35,7 @@
                     </svg>
                     <?php endif; ?>
                     <a href="#" class=" align-items-center text-white text-decoration-none dropdown-toggla" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src=<?php if($_SESSION['idLiga']!=0){echo('"../imagenes/usuarios/'.$_SESSION['correo'].'"');}else{echo('"../imagenes/default.png"');}?> alt="imagenDePerfil" width="54" style="border: 2px solid #dc3545" height="54" class="rounded-circle me-2">
+                        <img src=<?php if($_SESSION['imagen']!=0){echo('"../imagenes/usuarios/'.$_SESSION['correo'].'.png"');}else{echo('"../imagenes/default.png"');}?> alt="imagenDePerfil" width="54" style="border: 2px solid #dc3545" height="54" class="rounded-circle me-2">
                     </a>
                     <ul class="dropdown-menu  mt-5 dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
                         <li><a class="dropdown-item" href="./perfil.php"><strong>PERFIL</strong></a></li>
