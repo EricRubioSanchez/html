@@ -3,6 +3,7 @@
 require_once("env.php");
 require_once("usuaris.php");
 require_once("ligasFantasy.php");
+require_once("jugadores.php");
 
 /**
  * Summary of obrirBDD

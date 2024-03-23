@@ -38,10 +38,21 @@
      include_once("./navs/header.php");
      if ($_SESSION['idLiga']!=0){
     include_once("./navs/aside.php");} ?>
+
+<?php if(isset($errors)&&($errors!="")):?>
+    <div class="alert alert-danger d-flex alert-dismissible fade show" role="alert" style="position:absolute; margin-top:15vh; margin-left:33%">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" style="margin: auto;" fill="currentColor" class="bi bi-exclamation-triangle-fill me-2" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+        </svg>
+        <div> <?php echo($errors) ?> </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <?php endif; ?>
+
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
         <div class="articulo text-white container-fluid" style="width: 80.9375rem; margin:auto;margin-top: 10vh;">
 
-            <form class="needs-validation px-4 h4 mx-3" novalidate>
+            <form class="needs-validation px-4 h4 mx-3" novalidate method="POST" action="../controlador/crearJugadoresBases.php">
                 <div class="container">
                     <div class="row">
                         <div class="col col-xl-6 col-12">
@@ -223,7 +234,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col col-8">
-                                                <select id="pelo" class="form-select">
+                                                <select id="pelo" name="selectPelo" class="form-select">
                                                     <option selected>Calvo</option>
                                                     <option>Largo</option>
                                                     <option>Medio</option>
@@ -255,7 +266,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col col-8">
-                                                <select id="ojos" class="form-select">
+                                                <select id="ojos" name="selectOjos" class="form-select">
                                                     <option selected>Predeterminados</option>
                                                     <option>Eyeliner</option>
                                                     <option>Ojeras</option>
@@ -280,7 +291,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col col-8">
-                                                <select id="barba" class="form-select">
+                                                <select id="barba" name="selectBarba" class="form-select">
                                                     <option selected>Ninguna</option>
                                                     <option>BarbaCorta</option>
                                                     <option>Barba</option>
@@ -307,21 +318,21 @@
                                         <div class="row">
                                             <div class="col col-8"><label for="accesorios">Accesorios</label></div>
                                             <div class="col col-4">
-                                                <img alt="Imagen del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/cuerpo.png">
-                                                <img alt="Imagen del Personaje" class="piel" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/cabeza.png">
+                                                <img alt="Cuerpo del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/cuerpo.png">
+                                                <img alt="Cabeza del Personaje" class="piel" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/cabeza.png">
                                                 <img alt="Boca del Personaje" class="boca" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/boca/Predeterminada.png">
                                                 <img alt="Barba del Personaje" class="barba" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/creacion/barba/Perilla.png">
                                                 <img alt="Nariz del Personaje" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/nariz.png">
                                                 <img alt="Pupilas del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/ojos/Predeterminados_2.png">
                                                 <img alt="Ojos del Personaje" class="ojos" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" src="../imagenes/creacion/ojos/Predeterminados.png">
                                                 <img alt="Accesorios del Personaje" class="accesorios" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/creacion/accesorios/GafasAviador.png">
-                                                <img alt="Imagen del Personaje" class="pelo" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/creacion/pelo/Largo.png">
+                                                <img alt="Pelo del Personaje" class="pelo" style="border: 5px solid #ED3B3B;width:10rem;height:10rem;position:absolute;" hidden src="../imagenes/creacion/pelo/Largo.png">
                                             </div>
 
                                         </div>
                                         <div class="row">
                                             <div class="col col-8">
-                                                <select id="accesorios" class="form-select">
+                                                <select id="accesorios" name="selectAccesorios" class="form-select">
                                                     <option selected>Ninguno</option>
                                                     <option>GafasAviador</option>
                                                     <option>GafasRedondas</option>
@@ -342,7 +353,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col col-8">
-                                                <select id="boca" class="form-select">
+                                                <select id="boca" name="selectBoca" class="form-select">
                                                     <option selected>Predeterminada</option>
                                                     <option>Sonriente</option>
                                                     <option>Morritos</option>
@@ -365,7 +376,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col col-4">
-                                                <select id="posicion1" class="form-select">
+                                                <select id="posicion1" name="selectPos1" class="form-select">
                                                     <option selected>C</option>
                                                     <option>PG</option>
                                                     <option>SG</option>
@@ -374,7 +385,7 @@
                                                 </select>
                                             </div>
                                             <div class="col col-4">
-                                                <select id="posicion2" class="form-select">
+                                                <select id="posicion2" name="selectPos2" class="form-select">
                                                     <option selected>Ninguna</option>
                                                     <option hidden disabled>C</option>
                                                     <option>PG</option>
@@ -398,7 +409,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col col-12">
-                                                <input required type="text" minlength="4" class="form-control" id="nombre" placeholder="Name">
+                                                <input required type="text" minlength="4" name="nombre" class="form-control" id="nombre" placeholder="Name">
                                                 <div class="invalid-feedback">
                                                     Por favor introduce un nombre válido.
                                                 </div>

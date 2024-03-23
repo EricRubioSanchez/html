@@ -163,6 +163,8 @@ function randomizarStats() {
 
 }
 
+let pieles=["#FFDCB1","#E5C298","#E4B98E","#E2B98F","#E3A173","#D99164","#CC8443","#C77458","#A53900","#880400","#710200","#440000","#FFE0C4","#EECFB4","#DEAB7F","#E0B184","#DFA675","#BE723C","#A01900","#5B0000","#352018","#EDE4C8","#EFD6BD","#EABD9D","#E3C2AE","#DFB997","#D0926E","#BD9778","#BB6D4A","#940A00","#E1ADA4","#A58869","#7B0000","#720000","#380000"]
+
 function randomizarStyle(){
     for (let index = 0; index < $("select").length; index++) {
         const element = $("select")[index];
@@ -174,7 +176,8 @@ function randomizarStyle(){
         }
     }
     canviarPosicion()
-    document.getElementById("piel").value="#"+Math.floor(Math.random()*16777215).toString(16);
+    console.log(pieles[Math.random()*pieles.length]);
+    document.getElementById("piel").value=pieles[Math.floor(Math.random()*pieles.length)];
     canviarColor(document.getElementById("piel"))
 
 
