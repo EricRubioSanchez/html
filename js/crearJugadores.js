@@ -51,6 +51,7 @@ function calcularMaximos() {
 
 function canviarColor(elemento) {
     var mug = document.getElementsByClassName(elemento.getAttribute("name"))[0];
+    mug.onload=null;
     var canvas = document.createElement("canvas");
     var ctx = canvas.getContext("2d", { willReadFrequently: true });
     var originalPixels = null;
@@ -126,7 +127,7 @@ function canviarTipo(e) {
         if (carpeta == "ojos") {
             let ruta = "../imagenes/creacion/" + carpeta + "/" + e.value + "_2.png";
             img.setAttribute("src", ruta);
-            document.getElementById(carpeta + "Color").value = "#000000"
+            //document.getElementById(carpeta + "Color").value = "#000000"
 
             img = document.getElementsByClassName(carpeta)[1];
             ruta = "../imagenes/creacion/" + carpeta + "/" + e.value + ".png";
@@ -212,7 +213,12 @@ function imgLoaded(e){
 
 let numero = 0;
 const puntosTotales = 400;
-document.getElementById("puntos").innerHTML = puntosTotales;
+
+canviarPosicion()
+puntosActuales();
+calcularMaximos();
+
+
 
 document.getElementById("posicion1").addEventListener("change",canviarPosicion)
 

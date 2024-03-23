@@ -16,9 +16,15 @@ let id;
     if(e.target.parentElement.parentElement.hasAttribute("id")){
 
         id=e.target.parentElement.parentElement.getAttribute("id");
-    }else{
+    }else if(e.target.parentElement.parentElement.parentElement.hasAttribute("id")){
 
+        id=e.target.parentElement.parentElement.parentElement.getAttribute("id");
+    }
+    else{
         id=e.target.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
     }
+
+    window.location.href = "../controlador/editarJugador.php?id="+id;
+
 }
 $("button[name=editar]").on("click",editar)
