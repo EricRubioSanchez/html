@@ -50,4 +50,15 @@ function buscarJugador($id){
     }
 }
 
+function eliminarJugador($id){
+  $conexio=obrirBDD();
+  if(!is_null($conexio)){
+  $setencia = 'DELETE FROM jugadores WHERE id = :id';
+  $array=array(':id' => $id);
+  executarSentencia($setencia,$array,$conexio);
+  $conexio=tancarBDD($conexio); 
+  }
+  
+}
+
 ?>
