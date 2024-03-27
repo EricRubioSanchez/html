@@ -10,14 +10,14 @@
             </a>
         </div>
         <div class="col col-2 text-center">
-            <a href="./crearFantasy.php" <?php if ($crearFantasyActive) : ?> class="nav-link link-danger " aria-current="page">
+            <a <?php if (!isset($_SESSION['correo'])) : ?> href="./login.php" <?php else : ?> href="./crearFantasy.php" <?php endif; ?> <?php if ($crearFantasyActive) : ?> class="nav-link link-danger " aria-current="page">
             <?php else : ?> class="nav-link link-light alink">
             <?php endif; ?>
             <strong>CREAR FANTASY</strong>
             </a>
         </div>
         <div class="col col-2 text-center">
-            <a href="./unirseFantasy.php" <?php if ($unirseFantasyActive) : ?> class="nav-link link-danger " aria-current="page">
+            <a <?php if (!isset($_SESSION['correo'])) : ?> href="./login.php" <?php else : ?> href="./unirseFantasy.php" <?php endif; ?> <?php if ($unirseFantasyActive) : ?> class="nav-link link-danger " aria-current="page">
             <?php else : ?> class="nav-link link-light alink">
             <?php endif; ?>
             <strong>UNIRSE FANTASY</strong>

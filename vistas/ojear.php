@@ -15,8 +15,9 @@
 <body>
 <?php session_start();
      include_once("./navs/header.php");
-     if ($_SESSION['idLiga']!=0){
-    include_once("./navs/aside.php");} ?>
+     if (isset($_SESSION['idLiga'])&&$_SESSION['idLiga'] != 0) {
+        include_once("./navs/aside.php");
+    } ?>
     <main class="main align-items-center justify-content-center justify-content-md-between container-fluid">
         <div class="articulo text-white container-fluid pb-3" style="width: 92.9375rem; margin:auto;margin-top: 11vh; padding-top:1rem;padding-left:3rem;">
             <div class="row">

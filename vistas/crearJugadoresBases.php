@@ -36,8 +36,9 @@
 <body>
 <?php session_start();
      include_once("./navs/header.php");
-     if ($_SESSION['idLiga']!=0){
-    include_once("./navs/aside.php");} ?>
+     if (isset($_SESSION['idLiga'])&&$_SESSION['idLiga'] != 0) {
+        include_once("./navs/aside.php");
+    } ?>
 
 <?php if(isset($errors)&&($errors!="")):?>
     <div class="alert alert-danger d-flex alert-dismissible fade show" role="alert" style="position:absolute; margin-top:15vh; margin-left:33%">

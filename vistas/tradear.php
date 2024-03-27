@@ -39,8 +39,9 @@
 <body>
 <?php session_start();
      include_once("./navs/header.php");
-     if ($_SESSION['idLiga']!=0){
-    include_once("./navs/aside.php");} ?>
+     if (isset($_SESSION['idLiga'])&&$_SESSION['idLiga'] != 0) {
+        include_once("./navs/aside.php");
+    } ?>
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
         <div class="container justify-content-between" style="margin-top: 8vh;">
             <form>

@@ -34,8 +34,9 @@
 <body>
 <?php session_start();
      include_once("./navs/header.php");
-     if ($_SESSION['idLiga']!=0){
-    include_once("./navs/aside.php");} ?>
+     if (isset($_SESSION['idLiga'])&&$_SESSION['idLiga'] != 0) {
+        include_once("./navs/aside.php");
+    } ?>
     <main class="main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between container-fluid">
         <div class="articulo text-white container" style="width: 66.4rem; margin-top: 17vh;">
         <form class="needs-validation px-4 " novalidate>

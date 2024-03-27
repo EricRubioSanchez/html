@@ -48,7 +48,7 @@
 <body>
     <?php
     include_once("./navs/header.php");
-    if ($_SESSION['idLiga'] != 0) {
+    if (isset($_SESSION['idLiga'])&&$_SESSION['idLiga'] != 0) {
         include_once("./navs/aside.php");
     } ?>
 
